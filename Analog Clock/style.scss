@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900');
+*{
+  box-sizing: border-box;
+  font-family: 'Orbitron',  sans-serif; 
+  font-weight: 100;
+}
+
+@mixin flexRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+} 
+
+$clockColor: #222222;
+$clockItemColor: #ffffff;
+
+body{
+  position: relative;
+  height: 90vh;
+  background-color: #2d2d2d;
+}
+
+.clock{ 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 755px;
+  @include flexRow;  
+  margin: 0 auto;   
+  &__block{ 
+    @include flexRow; 
+    height: 250px;
+    align-items: center;  
+    margin: 0 5px;
+    &:after{
+      content: " :";
+      color: $clockItemColor;
+      font-size: 65px; 
+      margin-left: 10px;
+    }
+    &:last-child:after {
+      content: "";
+    }
+  }  
+  &__item{
+    font-weight: 400;
+    color: $clockItemColor; 
+    width: 210px;
+    text-align: center;
+    border-radius: 3px;
+    margin: 0 2px;
+    background: $clockColor; 
+    font-size: 100px;
+    position: relative;
+    overflow: hidden;
+    &::after{
+      content: " ";    
+      display: block;
+      border: 2px solid #2d2d2d;
+      width: 100%; 
+      top: 50%;
+      position: absolute;
+    }
+  } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
