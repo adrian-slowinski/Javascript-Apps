@@ -67,6 +67,7 @@ body {
   border-radius: 3px;
   margin: 0 2px;
   background: #222222;
+  background: linear-gradient(180deg, #222222 2%, #373535 48%, #222222 98%);
   font-size: 100px;
   position: relative;
   overflow: hidden;
@@ -82,7 +83,8 @@ body {
 }
 
 .clock__second {
-  background-color: red;
+  background: red;
+  background: linear-gradient(180deg, red 2%, #f96464 51%, #fd0000 98%);
 }
 
 @-webkit-keyframes flipSecondsCard {
