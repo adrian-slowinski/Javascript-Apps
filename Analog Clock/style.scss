@@ -63,11 +63,31 @@ body{
       position: absolute;
     }
   } 
+  &__second{
+    background-color: red;
+  }
+} 
+@keyframes flipSecondsCard {
+  0% {
+    transform: rotateX(0);
+  }
+
+  50% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(0);
+  }
 }
 
-
-
-
+.clock__second{
+  // animation-name: flipSecondsCard;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: all 1s linear;
+  transform: rotateX(0);
+}
 
 
 
