@@ -41,7 +41,7 @@ body {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 250px;
+  overflow: hidden;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
@@ -57,6 +57,15 @@ body {
 
 .clock__block:last-child:after {
   content: "";
+}
+
+.clock__block--seconds {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .clock__item {
@@ -84,47 +93,5 @@ body {
 
 .clock__second {
   background: red;
-  background: linear-gradient(180deg, red 2%, #f96464 51%, #fd0000 98%);
-}
-
-@-webkit-keyframes flipSecondsCard {
-  0% {
-    -webkit-transform: rotateX(0);
-            transform: rotateX(0);
-  }
-  50% {
-    -webkit-transform: rotateX(180deg);
-            transform: rotateX(180deg);
-  }
-  100% {
-    -webkit-transform: rotateX(0);
-            transform: rotateX(0);
-  }
-}
-
-@keyframes flipSecondsCard {
-  0% {
-    -webkit-transform: rotateX(0);
-            transform: rotateX(0);
-  }
-  50% {
-    -webkit-transform: rotateX(180deg);
-            transform: rotateX(180deg);
-  }
-  100% {
-    -webkit-transform: rotateX(0);
-            transform: rotateX(0);
-  }
-}
-
-.clock__second {
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  transition: all 1s linear;
-  -webkit-transform: rotateX(0);
-          transform: rotateX(0);
+  background: linear-gradient(180deg, red 2%, #ff6d6d 51%, #fd0000 98%);
 }

@@ -27,22 +27,31 @@ body{
   transform: translate(-50%, -50%);
   width: 755px;
   @include flexRow;  
-  margin: 0 auto;   
+  margin: 0 auto; 
+
   &__block{ 
-    @include flexRow; 
-    height: 250px;
+    @include flexRow;  
+    overflow: hidden;
     align-items: center;  
     margin: 0 5px;
+
     &:after{
       content: " :";
       color: $clockItemColor;
       font-size: 65px; 
       margin-left: 10px;
     }
+
     &:last-child:after {
       content: "";
     }
+
+    &--seconds{
+      display: flex;
+      flex-direction: column ;
+    }
   }  
+
   &__item{
     font-weight: 400;
     color: $clockItemColor; 
@@ -64,32 +73,14 @@ body{
       position: absolute;
     }
   } 
-  &__second{
-     background: rgb(255, 0, 0);
-     background: linear-gradient(180deg, rgba(255, 0, 0, 1) 2%, rgba(249, 100, 100, 1) 51%, rgba(253, 0, 0, 1) 98%);
+  &__second{ 
+    background: rgb(255, 0, 0);
+    background: linear-gradient(180deg, rgba(255, 0, 0, 1) 2%, rgba(255, 109, 109, 1) 51%, rgba(253, 0, 0, 1) 98%);
+  
   }
 } 
-@keyframes flipSecondsCard {
-  0% {
-    transform: rotateX(0);
-  }
-
-  50% {
-    transform: rotateX(180deg);
-  }
-  100% {
-    transform: rotateX(0);
-  }
-}
-
-.clock__second{
-  // animation-name: flipSecondsCard;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  transition: all 1s linear;
-  transform: rotateX(0);
-}
+ 
+ 
 
 
 
