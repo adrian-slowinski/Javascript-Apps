@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+body{
+  background-color: #222222;
+  /* position: relative;s */
+  height: 100% !important;
+  overflow: hidden;
+}
+.circle{ 
+  border-radius: 50%; 
+  position: absolute;
+}
+
+button{
+  background: transparent;
+  background-color: transparent;
+  padding: 12px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 21px;
+  font-family: 'Oswald',
+  sans-serif;
+  text-transform: uppercase;
+  z-index: 999999;
+  border:2px solid #ffffff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+

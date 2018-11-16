@@ -3,10 +3,7 @@ setInterval(function(){
  
   let hour = document.querySelector(".clock__hour");
   let minute = document.querySelector(".clock__minute");
-  let second = document.querySelector(".clock__second");
-  let second1 = document.querySelector(".clock__second--1");
-  let second2 = document.querySelector(".clock__second--2");
-  let second3 = document.querySelector(".clock__second--3");
+  let second = document.querySelector(".clock__second"); 
 
   let currentDate = new Date();
 
